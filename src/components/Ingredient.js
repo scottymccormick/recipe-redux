@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Colors, Sizes } from 'react-foundation';
 
-const Ingredient = () => {
+const Ingredient = ({ name, onDeleteClick }) => {
   return (
     <li>
-      Item Text
-      <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
+      {name}
+      <Button color={Colors.ALERT} size={Sizes.TINY} onClick={onDeleteClick}>X</Button>  
     </li>
   )
 }
