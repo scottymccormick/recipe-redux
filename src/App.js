@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Menu, MenuItem, Alignments } from 'react-foundation';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header>
+          <h1>Recipes with Redux</h1>
         </header>
+        <main>
+          <h3>Ingredients</h3>
+          <Menu isVertical>
+            <MenuItem>Item Text</MenuItem>
+            <MenuItem>Item Text</MenuItem>
+            <MenuItem>Item Text</MenuItem>
+          </Menu>
+        </main>
       </div>
     );
   }
