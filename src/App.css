@@ -2,3 +2,15 @@
   text-align: center;
 }
 
+ul {
+  list-style: none;
+  margin-left: 2em;
+}
+
+li {
+  line-height: 1.3em;
+}
+
+.ingredient-list .button {
+  margin: 1em;
+}

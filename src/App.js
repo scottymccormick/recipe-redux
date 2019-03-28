@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, MenuItem, Alignments } from 'react-foundation';
+import { Button, Colors, Sizes, Alignments } from 'react-foundation';
 import './App.css';
 
 class App extends Component {
@@ -11,11 +11,38 @@ class App extends Component {
         </header>
         <main>
           <h3>Ingredients</h3>
-          <Menu isVertical>
-            <MenuItem>Item Text</MenuItem>
-            <MenuItem>Item Text</MenuItem>
-            <MenuItem>Item Text</MenuItem>
-          </Menu>
+          <ul className="ingredient-list">
+            <li>
+              Item Text
+              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
+            </li>
+            <li>
+              Item Text
+              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
+            </li>
+            <li>
+              Item Text
+              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
+            </li>
+          </ul>
+          <h4>Add Ingredient</h4>
+          <form>
+            <div className="grid-x grid-padding-x">
+              <div className="small-3 cell">
+                <label htmlFor="item-input" className="text-right middle">
+                  Name
+                </label>
+              </div>
+              <div className="small-6 cell">
+                <input type="text" id="item-input" placeholder="Ex: Carrot"/>
+              </div>
+              <div className="small-3 cell">
+                <Button type="submit" color={Colors.SUCCESS}>
+                  Add Item
+                </Button>
+              </div>
+            </div>
+          </form>
         </main>
       </div>
     );
