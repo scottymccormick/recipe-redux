@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Colors, Sizes, Alignments } from 'react-foundation';
+import { Button, Colors, Sizes } from 'react-foundation';
 import './App.css';
+import IngredientList from './components/IngredientList';
 
 class App extends Component {
   render() {
@@ -10,21 +11,8 @@ class App extends Component {
           <h1>Recipes with Redux</h1>
         </header>
         <main>
-          <h3>Ingredients</h3>
-          <ul className="ingredient-list">
-            <li>
-              Item Text
-              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
-            </li>
-            <li>
-              Item Text
-              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
-            </li>
-            <li>
-              Item Text
-              <Button color={Colors.ALERT} size={Sizes.TINY}>X</Button>  
-            </li>
-          </ul>
+          <IngredientList />
+
           <h4>Add Ingredient</h4>
           <form>
             <div className="grid-x grid-padding-x">
