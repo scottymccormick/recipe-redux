@@ -13,7 +13,7 @@ class App extends Component {
         </header>
         <main>
           <IngredientList />
-          <AddIngredient />
+          {/* <AddIngredient /> */}
         </main>
       </div>
     );
