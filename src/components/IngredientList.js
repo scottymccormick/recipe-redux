@@ -13,6 +13,11 @@ class IngredientList  extends Component{
   }
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.dispatch({
+      type: "ADD_INGREDIENT",
+      name: this.state.name
+    })
+    e.target.reset()
   }
   handleChange = (e) => {
     this.setState({
@@ -20,7 +25,6 @@ class IngredientList  extends Component{
     })
   }
   render() {
-    console.log(this.props)
     return (
       <div>
         <h3>Ingredients</h3>
@@ -34,12 +38,12 @@ class IngredientList  extends Component{
         <form onSubmit={this.handleSubmit}>
           <div className="grid-x grid-padding-x">
             <div className="small-3 cell">
-              <label htmlFor="item-input" className="text-right middle">
+              <label htmlFor="name-input" className="text-right middle">
                 Name
               </label>
             </div>
             <div className="small-6 cell">
-              <input type="text" id="item-input" placeholder="Ex: Carrot"
+              <input type="text" name="name" id="name-input" placeholder="Ex: Carrot"
                 onChange={this.handleChange}/>
             </div>
             <div className="small-3 cell">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import IngredientList from './components/IngredientList';
-import AddIngredient from './containers/AddIngredient';
+// import AddIngredient from './containers/AddIngredient';
 
 
 class App extends Component {
