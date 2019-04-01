@@ -22,7 +22,7 @@ const initialState = {
   ]
 }
 
-function ingredients(state = initialState, action) {
+function recipe(state = initialState, action) {
   switch(action.type) {
     case ADD_INGREDIENT:
       const newState = {...state}
@@ -43,7 +43,7 @@ function ingredients(state = initialState, action) {
 }
 
 const rootReducer = combineReducers({
-  ingredients,
+  recipe,
 })
 
 export default rootReducer

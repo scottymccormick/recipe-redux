@@ -25,11 +25,12 @@ class IngredientList  extends Component{
     })
   }
   render() {
+    console.log(this.props)
     return (
       <div>
         <h3>Ingredients</h3>
         <ul className="ingredient-list">
-          {this.props.ingredientState.ingredients.map((ingredient, idx) => {
+          {this.props.ingredients.map((ingredient, idx) => {
             return <Ingredient key={idx} name={ingredient.name} 
             // onDeleteClick={() => onDeleteClick(idx)} 
             />
@@ -58,10 +59,9 @@ class IngredientList  extends Component{
   }
 }
 
-function mapStateToProps (reduxState) {
-  console.log(reduxState)
+function mapStateToProps ({recipe}) {
   return {
-    ingredientState: reduxState.ingredients
+    ingredients: recipe.ingredients
   }
 }
 
