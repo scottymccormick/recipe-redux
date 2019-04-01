@@ -24,15 +24,21 @@ class IngredientList  extends Component{
       [e.target.name]: e.target.value
     })
   }
+  removeIngredient(id) {
+    this.props.dispatch({
+      type: "DELETE_INGREDIENT",
+      id
+    })
+  }
   render() {
     console.log(this.props)
     return (
       <div>
         <h3>Ingredients</h3>
         <ul className="ingredient-list">
-          {this.props.ingredients.map((ingredient, idx) => {
-            return <Ingredient key={idx} name={ingredient.name} 
-            // onDeleteClick={() => onDeleteClick(idx)} 
+          {this.props.ingredients.map(({name, id}) => {
+            return <Ingredient key={id} name={name} 
+            removeIngredient={this.removeIngredient.bind(this, id)} 
             />
           })}
         </ul>
