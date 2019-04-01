@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Ingredient from './Ingredient';
 import { Button, Colors } from 'react-foundation';
 import { connect } from 'react-redux'
+import { addIngredient, deleteIngredient } from '../actions/ingredients'
 
 class IngredientList  extends Component{
   constructor() {
@@ -71,4 +72,5 @@ function mapStateToProps ({recipe}) {
   }
 }
 
-export default connect(mapStateToProps)(IngredientList);
+
+export default connect(mapStateToProps, {addIngredient, deleteIngredient})(IngredientList);
