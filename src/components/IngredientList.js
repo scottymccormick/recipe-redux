@@ -14,10 +14,7 @@ class IngredientList  extends Component{
   }
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.dispatch({
-      type: "ADD_INGREDIENT",
-      name: this.state.name
-    })
+    this.props.addIngredient(this.state.name)
     e.target.reset()
   }
   handleChange = (e) => {
@@ -26,13 +23,9 @@ class IngredientList  extends Component{
     })
   }
   removeIngredient(id) {
-    this.props.dispatch({
-      type: "DELETE_INGREDIENT",
-      id
-    })
+    this.props.deleteIngredient(id)
   }
   render() {
-    console.log(this.props)
     return (
       <div>
         <h3>Ingredients</h3>
